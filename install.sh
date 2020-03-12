@@ -2,7 +2,7 @@ sudo apt -y install -qq wget
 wget -qq https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -q -y ./google-chrome-stable_current_amd64.deb
 sed -i '$ d' /opt/google/chrome/google-chrome
-echo "exec -a "$0" "$HERE/chrome" "$@" --no-sandbox" >> /opt/google/chrome/google-chrome
+echo 'exec -a "$0" "$HERE/chrome" "$@" --no-sandbox' >> /opt/google/chrome/google-chrome
 echo
 echo "The repository is in '/etc/apt/sources.list.d/google-chrome.list'"
 echo "For openning Google Chrome on terminal, use: 'google-chrome-stable'"
