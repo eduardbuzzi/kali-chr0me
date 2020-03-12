@@ -1,4 +1,4 @@
-sudo apt -y install -qq wget
+apt-get -y install -qq wget
 wget -qq https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -q -y ./google-chrome-stable_current_amd64.deb
 sed -i '$ d' /opt/google/chrome/google-chrome
