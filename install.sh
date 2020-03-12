@@ -5,16 +5,24 @@ echo
 echo "The repository is in '/etc/apt/sources.list.d/google-chrome.list'"
 echo "For openning Google Chrome on terminal, use: 'google-chrome-stable'"
 echo
-read -p "Do you want update and upgrade system? " QUESTION
+echo "Do you want update and upgrade system? "
 echo "(0) NO"
 echo "(1) YES"
+read -p "Your choice: " QUESTION
+while [ $QUESTION -ne '0' ] && [ $QUESTION -ne '1' ]
+do
+echo "Do you want update and upgrade system? "
+echo "(0) NO"
+echo "(1) YES"
+read -p "Your choice: " QUESTION
+done
 case QUESTION in
 0)
 exit
 ;;
 1)
-sudo apt update
-sudo apt upgrade
+sudo apt -y update
+sudo apt -y upgrade
 exit
 ;;
 esac
